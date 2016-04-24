@@ -55,6 +55,15 @@ concatenate([X|Xs], Ys, [X|Zs]) :- concatenate(Xs, Ys, Zs).
 myreverse([], []).
 myreverse([X|Xs], R) :- myreverse(Xs, Ys), append(Ys, [X], R).
 
+/* maplist to check if matrix is square */
+maplist(same_length([1,2,3]), [[12,32,12], [1,2,3], [23,4213, 23]]).
+maplist(same_length([1,2,3]), [[12,32,12], [1,2,3], [23]]).
+
+maplist(plus(1), [1,2,3], Result).
+
+/* reduce */
+foldl(plus, [1,2,3,4], 0, R).
+findall(X, between(1, 100, X), Xs), foldl(plus, Xs, 0, R).
 
 /* Using Prolog for solving equation */
 use_module(library(clpfd)).
