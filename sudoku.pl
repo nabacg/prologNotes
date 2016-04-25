@@ -1,5 +1,5 @@
 
-use_module(library(clpfd)).
+:- use_module(library(clpfd)).
 /* 
 
 
@@ -67,7 +67,7 @@ sudoku4(Puzzle, Solution) :-
        Col1, Col2, Col3, Col4,    
        Square1, Square2, Square3, Square4]),
     Solution ins 1..4,
-    clpfd:label(Solution),
+    abel(Solution),
     show([Row1, Row2, Row3, Row4]).
 
 valid([]).
